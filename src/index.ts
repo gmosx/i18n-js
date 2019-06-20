@@ -1,9 +1,10 @@
-export interface Dictionary {
+interface Dictionary {
     [key: string]: string
 }
 
 let l10nDictionary: Dictionary = {}
 
+/** setLocalizationDictionary sets the dictionary used for localization. */
 export const setLocalizationDictionary = (dictionary: Dictionary) => {
     l10nDictionary = dictionary
 }
@@ -20,11 +21,10 @@ const localize = (strings: readonly string[], ...values: any[]): string => {
     if (strings.length == 1) {
         return localizeText(strings[0])
     } else {
-        let i = 0
-        input = strings[i++]
+        input = strings[0]
 
-        while (i < strings.length) {
-            input += `{${i - 1}}${strings[i++]}`
+        for (let i = 1; i < strings.length; i++) {
+            input += `{${i - 1}}${strings[i]}`
         }
 
         const localizedTemplate = localizeText(input)

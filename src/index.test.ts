@@ -7,6 +7,18 @@ const greekDictionary = {
     "I have {0} boxes and {1} balls": "Έχω {0} κουτιά και {1} μπάλλες",
 }
 
+const germanDictionary = {
+    "Hello": "Hallo",
+}
+
+test("setLocalizationDictionary should change the localization language", () => {
+    setLocalizationDictionary(greekDictionary)
+    expect(localizeText("Hello")).toBe("Γεια σας")
+
+    setLocalizationDictionary(germanDictionary)
+    expect(localizeText("Hello")).toBe("Hallo")
+})
+
 test("localizeText should localize raw strings", () => {
     setLocalizationDictionary(greekDictionary)
     expect(localizeText("Hello")).toBe("Γεια σας")
