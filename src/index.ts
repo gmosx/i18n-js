@@ -20,20 +20,20 @@ const localize = (strings: readonly string[], ...values: any[]): string => {
 
     if (strings.length == 1) {
         return localizeText(strings[0])
-    } else {
-        input = strings[0]
-
-        for (let i = 1; i < strings.length; i++) {
-            input += `{${i - 1}}${strings[i]}`
-        }
-
-        const localizedTemplate = localizeText(input)
-
-        return values.reduce(
-            (result, value, i) => result.replace(`{${i}}`, value),
-            localizedTemplate,
-        )
     }
+
+    input = strings[0]
+
+    for (let i = 1; i < strings.length; i++) {
+        input += `{${i - 1}}${strings[i]}`
+    }
+
+    const localizedTemplate = localizeText(input)
+
+    return values.reduce(
+        (result, value, i) => result.replace(`{${i}}`, value),
+        localizedTemplate,
+    )
 }
 
 /** l10n is the 'tag' function that translates a tagged template literal. */
