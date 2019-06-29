@@ -19,6 +19,7 @@ const greekDictionary = {
 }
 
 setLocalizationDictionary(greekDictionary)
+
 lc`Hello` // => "Γεια σας"
 const count = 7
 lc`${count} notifications are available` // => "7 ειδοποιήσεις είναι διαθέσιμες"
