@@ -1,6 +1,6 @@
 # I18N
 
-`I18N` is a JavaScript internationalization library. It leverages the ES' `tagged template literals` to provide an intuitive interface.
+`I18N` is a JavaScript internationalization library. It leverages `tagged template literals` to provide an intuitive interface.
 
 ## Features
 
@@ -19,14 +19,14 @@ const greekDictionary = {
 }
 
 setLocalizationDictionary(greekDictionary)
-l10n`Hello` // => "Γεια σας"
+lc`Hello` // => "Γεια σας"
 const count = 7
-l10n`${count} notifications are available` // => "7 ειδοποιήσεις είναι διαθέσιμες"
-l10n`I can change order ${count}` // => "7 μπορώ να αλλάξω σειρά"
+lc`${count} notifications are available` // => "7 ειδοποιήσεις είναι διαθέσιμες"
+lc`I can change order ${count}` // => "7 μπορώ να αλλάξω σειρά"
 
 const boxes = 3
 const balls = 2
-l10n`I have ${boxes} boxes and ${balls} balls`) // => "Έχω 3 κουτιά και 2 μπάλλες"
+lc`I have ${boxes} boxes and ${balls} balls`) // => "Έχω 3 κουτιά και 2 μπάλλες"
 
 ```
 

@@ -2,19 +2,19 @@ interface Dictionary {
     [key: string]: string
 }
 
-let l10nDictionary: Dictionary = {}
+let localizationDictionary: Dictionary = {}
 
 /** setLocalizationDictionary sets the dictionary used for localization. */
 export const setLocalizationDictionary = (dictionary: Dictionary) => {
-    l10nDictionary = dictionary
+    localizationDictionary = dictionary
 }
 
 /** localizeText translates the given text using the currentDictionary. */
 export const localizeText = (text: string): string => {
-    return l10nDictionary[text] || text
+    return localizationDictionary[text] || text
 }
 
-/** localize is used by the l10n 'tag' function. */
+/** localize is used by the lc 'tag' function. */
 const localize = (strings: readonly string[], ...values: any[]): string => {
     let input: string
 
@@ -36,7 +36,7 @@ const localize = (strings: readonly string[], ...values: any[]): string => {
     )
 }
 
-/** l10n is the 'tag' function that translates a tagged template literal. */
-export const l10n = (strings: TemplateStringsArray, ...values: any[]): string => {
+/** lc is the 'tag' function that localizes a tagged template literal. */
+export const lc = (strings: TemplateStringsArray, ...values: any[]): string => {
     return localize(strings.raw, ...values)
 }

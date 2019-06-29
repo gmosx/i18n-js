@@ -1,4 +1,4 @@
-import { l10n, localizeText, setLocalizationDictionary } from "./index";
+import { lc, localizeText, setLocalizationDictionary } from "./index";
 
 const greekDictionary = {
     "Hello": "Γεια σας",
@@ -35,18 +35,18 @@ test("localizeText should handle edge cases gracefully", () => {
     expect(localizeText(null)).toBe(null)
 })
 
-test("l10n tag should handle raw strings", () => {
+test("lc tag should handle raw strings", () => {
     setLocalizationDictionary(greekDictionary)
-    expect(l10n`Hello`).toBe("Γεια σας")
+    expect(lc`Hello`).toBe("Γεια σας")
 })
 
-test("l10n tag should handle interpolated strings", () => {
+test("lc tag should handle interpolated strings", () => {
     setLocalizationDictionary(greekDictionary)
     const count = 7
-    expect(l10n`${count} notifications are available`).toBe("7 ειδοποιήσεις είναι διαθέσιμες")
-    expect(l10n`I can change order ${count}`).toBe(`${count} μπορώ να αλλάξω σειρά`)
+    expect(lc`${count} notifications are available`).toBe("7 ειδοποιήσεις είναι διαθέσιμες")
+    expect(lc`I can change order ${count}`).toBe(`${count} μπορώ να αλλάξω σειρά`)
 
     const boxes = 3
     const balls = 2
-    expect(l10n`I have ${boxes} boxes and ${balls} balls`).toBe(`Έχω ${boxes} κουτιά και ${balls} μπάλλες`)
+    expect(lc`I have ${boxes} boxes and ${balls} balls`).toBe(`Έχω ${boxes} κουτιά και ${balls} μπάλλες`)
 })
