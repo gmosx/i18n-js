@@ -15,7 +15,7 @@ const greekDictionary = {
     "Hello": "Γεια σας",
     "{0} notifications are available": "{0} ειδοποιήσεις είναι διαθέσιμες",
     "I can change order {0}": "{0} μπορώ να αλλάξω σειρά",
-    "I have {0} boxes and {1} balls": "Έχω {0} κουτιά και {1} μπάλλες",
+    "I have {0} boxes and {1} balls": "Έχω {0} κουτιά και {1} μπάλες",
 }
 
 setLocalizationDictionary(greekDictionary)
@@ -27,7 +27,7 @@ lc`I can change order ${count}` // => "7 μπορώ να αλλάξω σειρά
 
 const boxes = 3
 const balls = 2
-lc`I have ${boxes} boxes and ${balls} balls`) // => "Έχω 3 κουτιά και 2 μπάλλες"
+lc`I have ${boxes} boxes and ${balls} balls`) // => "Έχω 3 κουτιά και 2 μπάλες"
 
 ```
 
