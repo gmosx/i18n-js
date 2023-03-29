@@ -1,16 +1,17 @@
 # I18N
 
-`I18N` is a JavaScript internationalization library. It leverages `tagged template literals` to provide an intuitive interface.
+`I18N` is a JavaScript internationalization library. It leverages `tagged template literals`
+to provide an intuitive interface.
 
 ## Features
 
-* Uses the english text as the lookup key
-* Supports interpolated strings
-* Supports reordering of template parameters
+- Uses the english text as the lookup key
+- Supports interpolated strings
+- Supports reordering of template parameters
 
 ## Example
 
-```ts
+```js
 const greekDictionary = {
     "Hello": "Γεια σας",
     "{0} notifications are available": "{0} ειδοποιήσεις είναι διαθέσιμες",
@@ -28,12 +29,13 @@ lc`I can change order ${count}` // => "7 μπορώ να αλλάξω σειρά
 const boxes = 3
 const balls = 2
 lc`I have ${boxes} boxes and ${balls} balls`) // => "Έχω 3 κουτιά και 2 μπάλες"
-
 ```
 
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate.
+Pull requests are welcome. For major changes, please open an issue first to
+discuss what you would like to change. Please make sure to update tests as
+appropriate.
 
 ## Contact
 
