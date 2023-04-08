@@ -1,4 +1,4 @@
-/** @typedef {import("./types.d.ts").Dictionary} Dictionary */
+/** @typedef {import("./index.d.ts").Dictionary} Dictionary */
 
 /**
  * @type {Dictionary | null | undefined}
